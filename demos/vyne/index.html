@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f6f0">
+  <title>VYNE · Storefront Demo</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a class="back" href="../../#project/vyne" data-copy="back">← กลับไปพอร์ต</a>
+      <span class="wordmark">VYNE</span>
+      <div class="topbar-actions">
+        <button id="language" type="button" lang="en">EN</button>
+        <button class="cart-button" type="button" id="open-cart"><span data-copy="cart">ตะกร้า</span> <span id="cart-count">0</span></button>
+      </div>
+    </div>
+  </header>
+  <main class="wrap">
+    <div class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow" data-copy="eyebrow">VYNE / เดโมหน้าร้าน</p>
+        <h1 data-copy="title">เสื้อผ้าสำหรับทุกวัน</h1>
+        <p data-copy="intro">ลองค้นหา เก็บรายการโปรด และจัดตะกร้าจากแค็ตตาล็อกตัวอย่างของ VYNE</p>
+        <a class="primary" href="#collection" data-copy="browse">ดูสินค้า ↓</a>
+      </div>
+      <img class="hero-image" src="oxford.webp" alt="" width="600" height="600" fetchpriority="high">
+    </div>
+    <p class="demo-note" data-copy="notice">เดโมใช้สินค้าและภาพตัวอย่าง กิจกรรมทั้งหมดเกิดขึ้นในเบราว์เซอร์และไม่มีการสั่งซื้อหรือชำระเงินจริง</p>
+    <section id="collection" aria-labelledby="collection-title">
+      <div class="collection-heading">
+        <h2 id="collection-title" data-copy="collection">แค็ตตาล็อก</h2>
+        <button type="button" id="open-editor" data-copy="edit">ลองเปลี่ยนรูปสินค้า</button>
+      </div>
+      <div class="filters">
+        <label><span data-copy="search">ค้นหาสินค้า</span><input id="search" type="search" autocomplete="off" placeholder="ชื่อสินค้า" data-placeholder="searchPlaceholder"></label>
+        <label><span data-copy="category">หมวดหมู่</span><select id="category"><option value="all" data-copy="all">ทั้งหมด</option><option value="clothing" data-copy="clothing">เสื้อผ้า</option><option value="accessories" data-copy="accessories">อุปกรณ์เสริม</option></select></label>
+        <label class="favorites-filter"><input id="favorites-only" type="checkbox"><span data-copy="favorites">เฉพาะรายการโปรด</span></label>
+      </div>
+      <p id="results" class="results" aria-live="polite"></p>
+      <div id="catalog" class="catalog"></div>
+    </section>
+  </main>
+  <footer class="wrap footer"><span>VYNE · CSI400</span><a href="https://github.com/AterixGz/CSI400_2025" target="_blank" rel="noopener noreferrer" data-copy="source">ดูโค้ดโปรเจกต์ ↗</a></footer>
+  <p class="sr-only" id="status" role="status"></p>
+  <dialog id="cart-dialog" aria-labelledby="cart-title">
+    <div class="dialog-heading"><h2 id="cart-title" data-copy="cart">ตะกร้า</h2><form method="dialog"><button data-copy="close">ปิด</button></form></div>
+    <div id="cart-items"></div>
+    <p class="cart-total"><span data-copy="total">ยอดรวม</span> <strong id="cart-total"></strong></p>
+    <p class="muted" data-copy="cartNote">ตะกร้าตัวอย่างสำหรับทดลองการใช้งาน</p>
+  </dialog>
+  <dialog id="editor-dialog" aria-labelledby="editor-title">
+    <div class="dialog-heading"><h2 id="editor-title" data-copy="edit">ลองเปลี่ยนรูปสินค้า</h2><form method="dialog"><button data-copy="close">ปิด</button></form></div>
+    <p class="muted" data-copy="imageNote">เลือกรูป JPG หรือ PNG ไม่เกิน 5 MB รูปจะใช้ในเดโมนี้จนกว่าจะโหลดหน้าใหม่</p>
+    <div class="editor-fields">
+      <label><span data-copy="product">สินค้า</span><select id="editor-product"></select></label>
+      <label><span data-copy="chooseImage">เลือกไฟล์รูป</span><input type="file" id="image-file" accept="image/jpeg,image/png"></label>
+    </div>
+    <img id="editor-preview" width="600" height="600" alt="">
+    <p id="editor-status" role="status"></p>
+    <button id="reset-image" type="button" data-copy="reset">คืนรูปเดิม</button>
+  </dialog>
+</body>
+</html>
