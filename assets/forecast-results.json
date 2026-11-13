@@ -1,0 +1,32 @@
+{
+  "source": "mu_model_comparison_v5.csv",
+  "results": [
+    {
+      "horizon": "1m",
+      "model": "RandomForest",
+      "feature_set": "B_price_macro",
+      "rmse": 0.30789191297459173,
+      "baseline_rmse": 0.24807771773686063,
+      "baseline": "historical_mean",
+      "n_test": 247
+    },
+    {
+      "horizon": "3m",
+      "model": "ExtraTrees",
+      "feature_set": "A_price_only",
+      "rmse": 0.5679702618479064,
+      "baseline_rmse": 0.553262912902276,
+      "baseline": "historical_mean",
+      "n_test": 239
+    },
+    {
+      "horizon": "6m",
+      "model": "HistGradientBoosting",
+      "feature_set": "C_price_macro_financials",
+      "rmse": 1.2554305025916228,
+      "baseline_rmse": 0.918749907278343,
+      "baseline": "momentum_21d",
+      "n_test": 226
+    }
+  ]
+}
