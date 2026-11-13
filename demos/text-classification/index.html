@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10172b">
+  <title>Text Classification · Spam Classifier Demo</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="wrap topbar"><a href="../../#project/nlp" data-copy="back">← กลับไปพอร์ต</a><button id="language" type="button" lang="en">EN</button></header>
+  <main class="wrap">
+    <p class="eyebrow">NLP / TF-IDF</p>
+    <h1>Text Classification</h1>
+    <p class="intro" data-copy="intro">ลองจำแนกข้อความสั้นภาษาอังกฤษว่าเป็นสแปมหรือข้อความปกติ แล้วสลับโมเดลเพื่อเปรียบเทียบผล</p>
+    <div class="layout">
+      <section class="panel" aria-labelledby="try-title">
+        <h2 id="try-title" data-copy="tryTitle">ทดลองโมเดล</h2>
+        <form id="classify">
+          <label><span data-copy="model">โมเดล</span><select id="model"><option value="bayes">Multinomial Naive Bayes</option><option value="logistic">Logistic Regression</option></select></label>
+          <label><span data-copy="message">ข้อความภาษาอังกฤษ</span><textarea id="message" rows="4" maxlength="1000" required>Congratulations! Claim your free prize today.</textarea></label>
+          <div class="samples"><button type="button" data-example="ordinary" data-copy="ordinary">ตัวอย่างข้อความปกติ</button><button type="button" data-example="spam" data-copy="spamSample">ตัวอย่างสแปม</button></div>
+          <button class="primary" id="predict" type="submit" disabled data-copy="predict">จำแนกข้อความ</button>
+        </form>
+        <p id="result" class="result" role="status"></p>
+      </section>
+      <section class="panel metrics" aria-labelledby="metrics-title">
+        <h2 id="metrics-title" data-copy="metrics">ผลบนชุดทดสอบ</h2>
+        <div class="accuracy"><strong id="accuracy">—</strong><span data-copy="accuracy">ความแม่นยำ</span></div>
+        <p id="test-count"></p>
+        <table>
+          <caption data-copy="matrix">ตารางเปรียบเทียบผลจริงกับผลทำนาย</caption>
+          <thead><tr><th scope="col" data-copy="actual">กลุ่มจริง</th><th scope="col" data-copy="predOrdinary">ทายว่าปกติ</th><th scope="col" data-copy="predSpam">ทายว่าสแปม</th></tr></thead>
+          <tbody><tr><th scope="row" data-copy="ordinaryLabel">ปกติ</th><td id="tn">—</td><td id="fp">—</td></tr><tr><th scope="row" data-copy="spamLabel">สแปม</th><td id="fn">—</td><td id="tp">—</td></tr></tbody>
+        </table>
+      </section>
+    </div>
+    <p class="footnote" data-copy="note">เดโมฝึกโมเดลใหม่ด้วยข้อมูลจากโน้ตบุ๊กต้นฉบับ โดยใช้คำภาษาอังกฤษที่พบอย่างน้อย 5 ข้อความ ผลอาจต่างจากโน้ตบุ๊กและใช้ทดสอบแนวคิดเรื่องสแปมเท่านั้น ข้อความที่พิมพ์ประมวลผลในเบราว์เซอร์</p>
+  </main>
+</body>
+</html>
