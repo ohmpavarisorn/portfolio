@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#070b18">
+  <meta name="description" content="Ohm — Pavrisorn Chuamor. Portfolio of data analytics, machine learning, AI and full stack projects. Computer Science student at Sripatum University.">
+  <meta property="og:title" content="Portfolio Website Pavarisorn">
+  <meta property="og:description" content="Selected work in data analytics, machine learning and full stack development. Available for cooperative education, January–April.">
+  <title>Portfolio Website Pavarisorn</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400..800&family=IBM+Plex+Sans+Thai:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="space.css?v=nebula">
+  <link rel="stylesheet" href="profile.css?v=full-width-certificates">
+  <link rel="stylesheet" href="ask-ohm.css?v=glass">
+  <link rel="stylesheet" href="cursor.css?v=spotlight">
+  <script src="content.js?v=orbit-showcase" defer></script>
+  <script src="app.js?v=credentials" defer></script>
+  <script src="navigation.js?v=soft-glass" defer></script>
+  <script src="space.js?v=showcase" defer></script>
+  <script src="ask-ohm.js?v=project-skills" defer></script>
+  <script src="certificates.js?v=wheel-loop" defer></script>
+  <script src="cursor.js?v=spotlight" defer></script>
+</head>
+<body>
+  <canvas id="space-canvas" aria-hidden="true"></canvas>
+  <div class="space-ambient" aria-hidden="true">
+    <span class="space-meteor"></span>
+    <span class="space-meteor"></span>
+  </div>
+  <div class="cursor-spotlight" aria-hidden="true"></div>
+  <a class="skip-link" href="#main" data-i18n="skip">ข้ามไปเนื้อหา</a>
+  <header class="header">
+    <a class="wordmark" href="#home"><span aria-hidden="true">✳</span>Portfolio</a>
+    <nav class="portfolio-nav" aria-label="Main navigation">
+      <span class="nav-glass" aria-hidden="true"></span>
+      <a href="#work" data-i18n="navWork">ผลงาน</a>
+      <a href="#about" data-i18n="navAbout">เกี่ยวกับผม</a>
+      <a href="#contact" data-i18n="navContact">ติดต่อผม</a>
+    </nav>
+    <div class="header-actions">
+      <div class="language" role="group" aria-label="Language"><button type="button" data-lang="th" aria-pressed="true">TH</button><span>/</span><button type="button" data-lang="en" aria-pressed="false">EN</button></div>
+    </div>
+  </header>
+  <main id="main">
+    <section class="hero wrap" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="status-dot"></span><span data-i18n="heroEyebrow">DATA ANALYTICS · SOFTWARE DEVELOPMENT</span></p>
+        <h1 data-i18n-html="heroTitle">วิเคราะห์ข้อมูล<br>สร้าง<span class="accent-word">เครื่องมือ<span class="underline"></span></span><br>ที่คนใช้ได้จริง<span class="hero-period">.</span></h1>
+        <p class="hero-name" data-i18n="profileName">ปวริศร เชื้อหมอ (โอม)</p>
+        <p class="hero-description" data-i18n="heroDescription">นักศึกษาวิทยาการคอมพิวเตอร์ปี 4 ที่สนใจสาย Data และชอบต่อยอดการวิเคราะห์ให้เป็นแอปที่ใช้งานได้</p>
+        <ul class="hero-capabilities" aria-label="Skills">
+          <li data-i18n="capabilityData">วิเคราะห์ข้อมูลและทำแดชบอร์ด</li>
+          <li data-i18n="capabilityModel">ทดลองและประเมินโมเดล</li>
+          <li data-i18n="capabilityWeb">พัฒนาเว็บแบบ Full Stack</li>
+        </ul>
+        <div class="hero-buttons">
+          <a class="button primary" href="#work"><span data-i18n="viewWork">สำรวจผลงาน</span><span aria-hidden="true">↘</span></a>
+          <a class="button resume-button" href="assets/pavarisorn-chuamor-resume.pdf" download><span data-i18n="downloadResume">ดาวน์โหลดเรซูเม่ (PDF)</span><span aria-hidden="true">↓</span></a>
+        </div>
+        <div class="availability"><span class="small-star">✳</span><div><strong data-i18n="available">สนใจสหกิจด้าน Data & Technology</strong><span data-i18n="internship">มกราคม – เมษายน · Full Stack Developer Track</span></div></div>
+      </div>
+      <div class="hero-visual orbit-stage" aria-labelledby="featured-title">
+        <div class="visual-grid" aria-hidden="true"></div>
+        <h2 id="featured-title" class="featured-title" data-i18n="featuredTitle">ผลงานเด่นสาย Data</h2>
+        <a class="hero-screen main-screen" href="#project/credit-risk">
+          <div class="showcase-label"><div><strong>Credit Risk Analytics</strong><small data-i18n="featuredCredit">สำรวจข้อมูลสินเชื่อกว่า 300,000 รายการ</small></div><span aria-hidden="true">↗</span></div>
+          <img src="assets/credit-ui.webp" width="1280" height="720" alt="" fetchpriority="high">
+        </a>
+        <a class="hero-screen second-screen" href="#project/mu-forecast">
+          <div class="showcase-label"><div><strong>Prediction_Stock_Price</strong><small data-i18n="featuredStock">Walk-forward evaluation · ผล v5 ยังไม่ชนะ baseline</small></div><span aria-hidden="true">↗</span></div>
+          <img src="assets/prediction-stock-ui.webp" width="1280" height="720" alt="">
+        </a>
+      </div>
+    </section>
+    <div class="discipline-strip" aria-label="Areas of interest">
+      <div class="wrap">
+        <span class="discipline-item">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4v16h16M8 15v-3m4 3V8m4 7v-5m4 5V5"/></svg>
+          Data Analytics
+        </span>
+        <span class="discipline-item">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 6 10 6M7 18l10-6M7 8v8"/><circle cx="5" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="12" r="2"/></svg>
+          Machine Learning
+        </span>
+        <span class="discipline-item">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 7-5 5 5 5m8-10 5 5-5 5m-2-13-4 16"/></svg>
+          Full Stack Development
+        </span>
+        <span class="discipline-item">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 3v3m6-3v3m-6 12v3m6-3v3M3 9h3m-3 6h3m12-6h3m-3 6h3m-9-6v6m-3-3h6"/></svg>
+          AI Integration
+        </span>
+      </div>
+    </div>
+
+    <section id="work" class="section wrap work-section">
+      <div class="section-heading"><div><p class="eyebrow section-index">01 / SELECTED WORK</p><h2 data-i18n-html="workTitle">สิ่งที่เรียนรู้<br>ผ่านการ<span class="serif-word">ลงมือทำ</span></h2></div><p class="section-intro" data-i18n="workIntro">จากการสำรวจข้อมูลและประเมินโมเดล ไปจนถึงการออกแบบและพัฒนาเว็บแอป นี่คือผลงานที่คัดมาเล่าถึงวิธีคิดและสิ่งที่ได้ลงมือทำ</p></div>
+      <div class="filter-row"><div class="filters" role="group" aria-label="Project filters"><button data-filter="all" aria-pressed="true" data-i18n="filterAll">ทั้งหมด</button><button data-filter="data" aria-pressed="false">Data & ML</button><button data-filter="ai" aria-pressed="false">AI</button><button data-filter="web" aria-pressed="false">Web</button><button data-filter="blockchain" aria-pressed="false">Blockchain</button></div><span class="project-count" id="project-count" aria-live="polite"></span></div>
+      <div class="project-grid" id="project-grid"></div>
+      <noscript><p>ผลงาน: Credit Risk Dashboard, MU Forecasting, Text Classification, MoneyFit AI, EventPack, VYNE, DocLibrary และ Bank DApp. กรุณาเปิด JavaScript เพื่อดูรายละเอียดและสลับภาษา</p></noscript>
+    </section>
+
+    <section class="playground-section" id="playground">
+      <div class="wrap">
+        <div class="section-heading"><div><p class="eyebrow section-index">02 / A CLOSER LOOK</p><h2 data-i18n-html="playTitle">ข้อมูลเล่าเรื่องได้<br>เมื่อเราลอง<span class="serif-word">ตั้งคำถาม</span></h2></div><p class="section-intro" data-i18n="playIntro">ลองปรับตัวกรองเพื่อสำรวจข้อมูลจากโปรเจกต์ Credit Risk และดูว่าองค์ประกอบของกลุ่มข้อมูลเปลี่ยนไปอย่างไร</p></div>
+        <div class="explorer">
+          <div class="explorer-top"><div><span class="live-dot"></span><strong>Credit Risk / Data Explorer</strong></div><span data-i18n="aggregateOnly">ข้อมูลสรุปจากชุดข้อมูลการเรียน</span></div>
+          <div class="explorer-controls"><label><span data-i18n="ageLabel">ช่วงอายุ</span><select id="age-filter"><option value="all">ทุกช่วงอายุ</option><option>18-24</option><option>25-29</option><option>30-34</option><option>35-39</option><option>40-44</option><option>45-49</option><option>50-59</option><option>60-69</option></select></label><label><span data-i18n="genderLabel">เพศในชุดข้อมูล</span><select id="gender-filter"><option value="all">ทั้งหมด</option><option value="F">F</option><option value="M">M</option></select></label><button class="reset-button" id="reset-data" data-i18n="reset">↺ รีเซ็ต</button><span class="data-source">SOURCE: application_train.csv</span></div>
+          <div class="explorer-body"><div class="data-metrics"><div><p data-i18n="recordsLabel">จำนวนข้อมูลที่เลือก</p><strong id="metric-count">—</strong><span id="metric-share">—</span></div><div><p data-i18n="targetLabel">สัดส่วน TARGET = 1</p><strong id="metric-rate">—</strong><span data-i18n="targetExplanation">เป้าหมายตาม label ของชุดข้อมูล</span></div><p class="metric-note" data-i18n="metricNote">ตัวอย่างการสำรวจข้อมูลเชิงพรรณนา ไม่ใช่โมเดลตัดสินสินเชื่อ</p></div><div class="age-chart"><div class="chart-heading"><h3 data-i18n="chartTitle">การกระจายตามช่วงอายุ</h3><span data-i18n="chartUnit">จำนวนรายการ</span></div><div id="age-chart" class="bars" role="group" aria-label="Age distribution chart"></div><div class="chart-legend"><span><i></i><span data-i18n="legendCount">จำนวนข้อมูลในกลุ่มที่เลือก</span></span><span data-i18n="chartHint">คลิกแท่งกราฟเพื่อกรองอายุ</span></div></div></div>
+          <p class="explorer-foot" data-i18n="dataFoot">แสดงเฉพาะสถิติรวม ไม่มีข้อมูลรายบุคคล · รายการที่อยู่นอกช่วงอายุ 18–69 ปีหรือรหัสเพศอื่นไม่รวมอยู่ในกราฟ</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section wrap about-section" id="about">
+      <figure class="about-card portrait">
+        <div class="portrait-orbit" aria-hidden="true"></div>
+        <div class="portrait-photo"><img src="assets/pavrisorn-portrait.webp" width="331" height="317" alt="Pavrisorn Chuamor (Ohm)" loading="lazy"></div>
+        <span class="portrait-star" aria-hidden="true">✦</span>
+      </figure>
+      <div class="about-copy"><p class="eyebrow section-index">03 / ABOUT ME</p><h2 data-i18n-html="aboutTitle">สวัสดีครับ ผมโอม<br><span class="serif-word">ชอบเข้าใจ แล้วลงมือสร้าง</span></h2><p data-i18n="aboutBody">ผมเป็นนักศึกษาปี 4 มหาวิทยาลัยศรีปทุม สาขาวิทยาการคอมพิวเตอร์และนวัตกรรมการพัฒนาซอฟต์แวร์ ในสาย Full Stack Developer และกำลังมองหาโอกาสสหกิจที่ได้เรียนรู้และทำงานกับข้อมูลมากขึ้น</p><p data-i18n="aboutBody2">ในงานกลุ่ม ผมร่วมทำตั้งแต่รวบรวมข้อมูลไปจนถึงแอป และให้ความสำคัญกับการคุยทำความเข้าใจระบบทั้งหมดเพื่ออธิบายแนวคิดและการทำงานได้ ส่วน EventPack เป็นโปรเจกต์ที่ลงมือทำด้วยตัวเอง</p><div class="education"><span class="education-icon">↗</span><div><strong data-i18n="educationTitle">มหาวิทยาลัยศรีปทุม</strong><p data-i18n="educationBody">วิทยาการคอมพิวเตอร์และนวัตกรรมการพัฒนาซอฟต์แวร์</p><span data-i18n="educationTrack">ชั้นปีที่ 4 · Full Stack Developer</span></div></div></div>
+    </section>
+    <section class="wrap skills-section" aria-labelledby="skills-title">
+      <div class="section-heading compact"><h2 id="skills-title" data-i18n="skillsTitle">สิ่งที่ผมทำได้</h2><a class="text-link credentials-jump" href="#credentials" data-i18n="credentialsTitle">ใบประกาศ</a></div>
+      <div class="skills-grid">
+        <div><h3 data-i18n="capabilityData">วิเคราะห์ข้อมูลและทำแดชบอร์ด</h3><p data-i18n="skillsData">เตรียมข้อมูลด้วย Python และ pandas แล้วใช้ Plotly กับ Streamlit ทำแดชบอร์ดที่กรองข้อมูลและเปรียบเทียบกลุ่มได้</p><a href="#project/credit-risk">Credit Risk Analytics <span aria-hidden="true">↗</span></a></div>
+        <div><h3 data-i18n="capabilityModel">ทดลองและประเมินโมเดล</h3><p data-i18n="skillsModel">ใช้ scikit-learn ทดลองโมเดลพยากรณ์หุ้น แบ่งข้อมูลตามเวลา และวัดผลด้วย RMSE เทียบกับ baseline</p><a href="#project/mu-forecast">Prediction_Stock_Price <span aria-hidden="true">↗</span></a></div>
+        <div><h3 data-i18n="capabilityWeb">พัฒนาเว็บแบบ Full Stack</h3><p data-i18n="skillsWeb">พัฒนาระบบจองจัดเลี้ยงด้วย ASP.NET Core MVC และ PostgreSQL ครอบคลุมบัญชีลูกค้า การจอง และหน้าจัดการเมนูสำหรับผู้ดูแล</p><a href="#project/eventpack">EventPack <span aria-hidden="true">↗</span></a></div>
+      </div>
+    </section>
+    <section class="wrap next-project" id="next-project"><span class="next-icon" aria-hidden="true">⌘</span><div><p class="eyebrow" data-i18n="nextEyebrow">EXPLORING NEXT / โปรเจกต์ถัดไป</p><h3 data-i18n="nextTitle">การยืนยันสำเนาเอกสารที่ดินด้วย Blockchain</h3><p data-i18n="nextBody">อีกทิศทางที่สนใจและเตรียมต่อยอดเป็นโปรเจกต์ใหม่</p></div><span class="coming-soon" data-i18n="comingSoon">กำลังวางแผน ↗</span></section>
+
+    <section id="credentials" class="credentials-section" aria-labelledby="credentials-title">
+      <div class="credentials-copy">
+        <h2 id="credentials-title" data-i18n="credentialsTitle">ใบประกาศ</h2>
+        <p id="certificates-hint" data-i18n="credentialsIntro">ใบประกาศจาก Microsoft · ใช้ล้อเมาส์หรือปัดเพื่อดูเพิ่มเติม</p>
+      </div>
+      <div class="certificate-deck">
+        <ol class="certificate-track" id="certificate-track" tabindex="0" aria-labelledby="credentials-title" aria-describedby="certificates-hint">
+          <li class="certificate-slide">
+            <button type="button" class="certificate-image gallery-image" data-image="assets/certificates/microsoft-01.png" data-caption="Get started with React" aria-labelledby="certificate-title-1">
+              <img src="assets/certificates/microsoft-01.png" alt="" width="385" height="257" loading="lazy">
+            </button>
+            <h3 id="certificate-title-1" lang="en">Get started with React</h3>
+          </li>
+          <li class="certificate-slide">
+            <button type="button" class="certificate-image gallery-image" data-image="assets/certificates/microsoft-02.png" data-caption="สถานะ การตอบสนอง และเหตุการณ์" aria-labelledby="certificate-title-2">
+              <img src="assets/certificates/microsoft-02.png" alt="" width="384" height="257" loading="lazy">
+            </button>
+            <h3 id="certificate-title-2" lang="th">สถานะ การตอบสนอง และเหตุการณ์</h3>
+          </li>
+          <li class="certificate-slide">
+            <button type="button" class="certificate-image gallery-image" data-image="assets/certificates/microsoft-03.png" data-caption="Publish an Angular, React, Svelte, or Vue JavaScript app with Azure Static Web Apps" aria-labelledby="certificate-title-3">
+              <img src="assets/certificates/microsoft-03.png" alt="" width="381" height="255" loading="lazy">
+            </button>
+            <h3 id="certificate-title-3" lang="en">Publish an Angular, React, Svelte, or Vue JavaScript app with Azure Static Web Apps</h3>
+          </li>
+          <li class="certificate-slide">
+            <button type="button" class="certificate-image gallery-image" data-image="assets/certificates/microsoft-04.png" data-caption="Authenticate users with Azure Static Web Apps" aria-labelledby="certificate-title-4">
+              <img src="assets/certificates/microsoft-04.png" alt="" width="383" height="255" loading="lazy">
+            </button>
+            <h3 id="certificate-title-4" lang="en">Authenticate users with Azure Static Web Apps</h3>
+          </li>
+          <li class="certificate-slide">
+            <button type="button" class="certificate-image gallery-image" data-image="assets/certificates/microsoft-05.png" data-caption="Working with data and properties in React components" aria-labelledby="certificate-title-5">
+              <img src="assets/certificates/microsoft-05.png" alt="" width="386" height="259" loading="lazy">
+            </button>
+            <h3 id="certificate-title-5" lang="en">Working with data and properties in React components</h3>
+          </li>
+          <li class="certificate-slide">
+            <button type="button" class="certificate-image gallery-image" data-image="assets/certificates/microsoft-06.png" data-caption="สร้างแอปพลิเคชันแบบเต็มรูปแบบด้วย React และ ASP.NET Core Minimal API" aria-labelledby="certificate-title-6">
+              <img src="assets/certificates/microsoft-06.png" alt="" width="399" height="259" loading="lazy">
+            </button>
+            <h3 id="certificate-title-6" lang="th">สร้างแอปพลิเคชันแบบเต็มรูปแบบด้วย React และ ASP.NET Core Minimal API</h3>
+          </li>
+          <li class="certificate-slide">
+            <button type="button" class="certificate-image gallery-image" data-image="assets/certificates/microsoft-07.png" data-caption="สร้าง Web API ด้วย ASP.NET Core Minimal API และ .NET" aria-labelledby="certificate-title-7">
+              <img src="assets/certificates/microsoft-07.png" alt="" width="392" height="267" loading="lazy">
+            </button>
+            <h3 id="certificate-title-7" lang="th">สร้าง Web API ด้วย ASP.NET Core Minimal API และ .NET</h3>
+          </li>
+          <li class="certificate-slide">
+            <button type="button" class="certificate-image gallery-image" data-image="assets/certificates/microsoft-08.png" data-caption="ใช้ฐานข้อมูลกับ Minimal API ด้วย Entity Framework Core และ ASP.NET Core" aria-labelledby="certificate-title-8">
+              <img src="assets/certificates/microsoft-08.png" alt="" width="375" height="256" loading="lazy">
+            </button>
+            <h3 id="certificate-title-8" lang="th">ใช้ฐานข้อมูลกับ Minimal API ด้วย Entity Framework Core และ ASP.NET Core</h3>
+          </li>
+          <li class="certificate-slide">
+            <button type="button" class="certificate-image gallery-image" data-image="assets/certificates/microsoft-09.png" data-caption="Publish an API to Azure Static Web Apps" aria-labelledby="certificate-title-9">
+              <img src="assets/certificates/microsoft-09.png" alt="" width="382" height="256" loading="lazy">
+            </button>
+            <h3 id="certificate-title-9" lang="en">Publish an API to Azure Static Web Apps</h3>
+          </li>
+          <li class="certificate-slide">
+            <button type="button" class="certificate-image gallery-image" data-image="assets/certificates/microsoft-10.png" data-caption="นำเข้าข้อมูลด้วย Windows PowerShell" aria-labelledby="certificate-title-10">
+              <img src="assets/certificates/microsoft-10.png" alt="" width="370" height="249" loading="lazy">
+            </button>
+            <h3 id="certificate-title-10" lang="th">นำเข้าข้อมูลด้วย Windows PowerShell</h3>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-section"><div class="wrap"><p class="eyebrow section-index">04 / LET'S CONNECT</p><div class="contact-heading"><h2 data-i18n-html="contactTitle">มีโอกาสดี ๆ<br>มา<span class="serif-word">คุยกันครับ</span><span class="contact-star">✳</span></h2><div><p data-i18n="contactBody">สนใจสหกิจด้าน Data และงานเทคโนโลยี<br>ในช่วงเดือนมกราคม – เมษายน</p><a class="button primary" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=Pavarisorn.chu%40spumail.net" target="_blank" rel="noopener noreferrer"><span data-i18n="emailMe">ส่งอีเมลถึงผม</span><span>↗</span></a></div></div><div class="contact-details"><a href="mailto:Pavarisorn.chu@spumail.net"><span>EMAIL</span><strong>Pavarisorn.chu@spumail.net ↗</strong></a><a href="tel:+66651214843"><span>PHONE</span><strong>065 121 4843 ↗</strong></a><a href="https://github.com/ohmpavarisorn" target="_blank" rel="noopener noreferrer"><span>GITHUB</span><strong>@ohmpavarisorn ↗</strong></a></div></div></section>
+  </main>
+  <div class="ask-widget">
+    <section class="ask-panel" id="ask-ohm" aria-labelledby="ask-title" hidden>
+      <div class="ask-header">
+        <h2 id="ask-title" tabindex="-1">Ask About Me</h2>
+        <button class="ask-close" type="button" aria-label="ปิด Ask About Me"><span aria-hidden="true">×</span></button>
+      </div>
+      <div class="ask-body">
+        <div class="ask-conversation" aria-live="polite" aria-atomic="true">
+          <p class="ask-question" hidden></p>
+          <p class="ask-reply"></p>
+        </div>
+        <form class="ask-form" role="search" aria-labelledby="ask-title">
+          <input name="question" type="search" maxlength="180" autocomplete="off" required>
+          <button type="submit"><span aria-hidden="true">↑</span></button>
+        </form>
+        <div class="ask-suggestions"></div>
+        <div class="ask-result" hidden></div>
+      </div>
+    </section>
+    <button class="ask-launcher" type="button" aria-controls="ask-ohm" aria-expanded="false" hidden><span aria-hidden="true">✦</span> Ask About Me</button>
+  </div>
+  <dialog id="project-dialog" aria-labelledby="dialog-title"><div class="dialog-inner"><button class="dialog-close" id="dialog-close" aria-label="Close project">✕</button><div id="dialog-content"></div></div></dialog>
+  <dialog id="image-dialog" aria-label="Project image"><button class="image-close" aria-label="Close image">✕</button><img id="lightbox-image" src="" alt=""></dialog>
+  <div class="toast" id="toast" role="status"></div>
+</body>
+</html>
+
+
