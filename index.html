@@ -17,6 +17,9 @@
   <link rel="stylesheet" href="profile.css?v=full-width-certificates">
   <link rel="stylesheet" href="ask-ohm.css?v=glass">
   <link rel="stylesheet" href="cursor.css?v=spotlight">
+  <link rel="preload" as="image" href="launch-planet.webp">
+  <link rel="stylesheet" href="launch.css">
+  <script src="launch.js" defer></script>
   <script src="content.js?v=orbit-showcase" defer></script>
   <script src="app.js?v=credentials" defer></script>
   <script src="navigation.js?v=soft-glass" defer></script>
@@ -46,34 +49,36 @@
     </div>
   </header>
   <main id="main">
-    <section class="hero wrap" id="home">
+    <section class="hero launch-hero" id="home">
+      <div class="launch-scene" aria-hidden="true">
+        <div class="launch-art"></div>
+        <div class="launch-grid"></div>
+      </div>
+      <div class="wrap launch-inner">
       <div class="hero-copy">
         <p class="eyebrow"><span class="status-dot"></span><span data-i18n="heroEyebrow">DATA ANALYTICS · SOFTWARE DEVELOPMENT</span></p>
         <h1 data-i18n-html="heroTitle">วิเคราะห์ข้อมูล<br>สร้าง<span class="accent-word">เครื่องมือ<span class="underline"></span></span><br>ที่คนใช้ได้จริง<span class="hero-period">.</span></h1>
         <p class="hero-name" data-i18n="profileName">ปวริศร เชื้อหมอ (โอม)</p>
         <p class="hero-description" data-i18n="heroDescription">นักศึกษาวิทยาการคอมพิวเตอร์ปี 4 ที่สนใจสาย Data และชอบต่อยอดการวิเคราะห์ให้เป็นแอปที่ใช้งานได้</p>
-        <ul class="hero-capabilities" aria-label="Skills">
-          <li data-i18n="capabilityData">วิเคราะห์ข้อมูลและทำแดชบอร์ด</li>
-          <li data-i18n="capabilityModel">ทดลองและประเมินโมเดล</li>
-          <li data-i18n="capabilityWeb">พัฒนาเว็บแบบ Full Stack</li>
-        </ul>
         <div class="hero-buttons">
-          <a class="button primary" href="#work"><span data-i18n="viewWork">สำรวจผลงาน</span><span aria-hidden="true">↘</span></a>
-          <a class="button resume-button" href="assets/pavarisorn-chuamor-resume.pdf" download><span data-i18n="downloadResume">ดาวน์โหลดเรซูเม่ (PDF)</span><span aria-hidden="true">↓</span></a>
+          <a class="button primary" href="#work"><span data-i18n="viewWork">สำรวจผลงาน</span></a>
+          <a class="button resume-button" href="assets/pavarisorn-chuamor-resume.pdf" download><span data-i18n="downloadResume">ดาวน์โหลดเรซูเม่ (PDF)</span></a>
         </div>
-        <div class="availability"><span class="small-star">✳</span><div><strong data-i18n="available">สนใจสหกิจด้าน Data & Technology</strong><span data-i18n="internship">มกราคม – เมษายน · Full Stack Developer Track</span></div></div>
+        <div class="availability"><span class="launch-signal" aria-hidden="true"></span><div><strong data-i18n="available">สนใจสหกิจด้าน Data & Technology</strong><span data-i18n="internship">มกราคม – เมษายน · Full Stack Developer Track</span></div></div>
       </div>
-      <div class="hero-visual orbit-stage" aria-labelledby="featured-title">
-        <div class="visual-grid" aria-hidden="true"></div>
-        <h2 id="featured-title" class="featured-title" data-i18n="featuredTitle">ผลงานเด่นสาย Data</h2>
-        <a class="hero-screen main-screen" href="#project/credit-risk">
-          <div class="showcase-label"><div><strong>Credit Risk Analytics</strong><small data-i18n="featuredCredit">สำรวจข้อมูลสินเชื่อกว่า 300,000 รายการ</small></div><span aria-hidden="true">↗</span></div>
-          <img src="assets/credit-ui.webp" width="1280" height="720" alt="" fetchpriority="high">
-        </a>
-        <a class="hero-screen second-screen" href="#project/mu-forecast">
-          <div class="showcase-label"><div><strong>Prediction_Stock_Price</strong><small data-i18n="featuredStock">Walk-forward evaluation · ผล v5 ยังไม่ชนะ baseline</small></div><span aria-hidden="true">↗</span></div>
-          <img src="assets/prediction-stock-ui.webp" width="1280" height="720" alt="">
-        </a>
+        <div class="launch-featured" aria-labelledby="featured-title">
+          <h2 id="featured-title" data-i18n="featuredTitle">ผลงานเด่นสาย Data</h2>
+          <div class="launch-projects">
+            <a class="launch-card" href="#project/credit-risk">
+              <img src="assets/credit-ui.webp" width="1280" height="720" alt="" decoding="async">
+              <div><strong>Credit Risk Analytics</strong><small data-i18n="featuredCredit">สำรวจข้อมูลสินเชื่อกว่า 300,000 รายการ</small></div>
+            </a>
+            <a class="launch-card" href="#project/mu-forecast">
+              <img src="assets/prediction-stock-ui.webp" width="1280" height="720" alt="" decoding="async">
+              <div><strong>Prediction_Stock_Price</strong><small data-i18n="featuredStock">Walk-forward evaluation · ผล v5 ยังไม่ชนะ baseline</small></div>
+            </a>
+          </div>
+        </div>
       </div>
     </section>
     <div class="discipline-strip" aria-label="Areas of interest">
