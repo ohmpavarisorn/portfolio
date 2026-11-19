@@ -328,8 +328,8 @@ html[lang="th"] .launch-hero .hero-copy h1 {
   .launch-featured { border: 0; padding: 0; align-self: center; }
   .launch-projects { position: relative; display: block; height: clamp(330px, 29vw, 440px); perspective: 1500px; }
   .launch-card { position: absolute; margin: 0; animation: none !important; transition: transform .45s cubic-bezier(.2,.8,.2,1), box-shadow .45s, border-color .3s; box-shadow: 0 30px 65px #0009, 4px 7px 0 #1b334b; }
-  .launch-card:first-child { width: 85%; left: 0; top: 22%; z-index: 3; transform: rotateZ(-7deg) rotateY(var(--card-y,-7deg)) rotateX(var(--card-x,3deg)); }
-  .launch-card:nth-child(2) { width: 80%; left: 19%; top: 0; z-index: 2; transform: rotateZ(9deg) rotateY(var(--card-y,8deg)) rotateX(var(--card-x,3deg)); }
+  .launch-card:first-child { width: 72%; left: -3%; top: 12%; z-index: 3; transform: rotateZ(-7deg) rotateY(var(--card-y,-7deg)) rotateX(var(--card-x,3deg)); }
+  .launch-card:nth-child(2) { width: 72%; left: 31%; top: 12%; z-index: 2; transform: rotateZ(9deg) rotateY(var(--card-y,8deg)) rotateX(var(--card-x,3deg)); }
   .launch-card:hover, .launch-card:focus-visible { z-index: 5; transform: translateY(-14px) rotateZ(0deg) rotateY(var(--card-y,0deg)) rotateX(var(--card-x,0deg)); border-color: #c4f1ff; box-shadow: 0 42px 85px #000b, 4px 7px 0 #345774; }
   .launch-card img { max-height: none; aspect-ratio: 16/9; }
   .launch-card:nth-child(2) small { font-size: 11px; }
