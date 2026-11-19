@@ -3,7 +3,6 @@
   if (!hero) return;
 
   const motion = matchMedia('(hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference)');
-  const cards = [...hero.querySelectorAll('.launch-card')];
   let pendingFrame = 0;
   let activeCard = null;
   let pointer = null;
