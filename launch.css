@@ -322,3 +322,17 @@ html[lang="th"] .launch-hero .hero-copy h1 {
   @keyframes project-float { 0%,100% { translate: 0 0; } 50% { translate: 0 -9px; } }
 }
 @media (prefers-reduced-motion:reduce) { .launch-hero .button.primary { transition: none; } }
+
+/* One layered composition keeps the two projects together in the hero. */
+@media (min-width: 1000px) {
+  .launch-featured { border: 0; padding: 0; align-self: center; }
+  .launch-featured h2 { margin: 0 0 18px 4%; }
+  .launch-projects { position: relative; display: block; height: clamp(330px, 30vw, 450px); }
+  .launch-card { position: absolute; margin: 0; animation: none !important; }
+  .launch-card:first-child { width: 78%; left: 2%; top: 0; z-index: 2; transform: perspective(1100px) rotateY(var(--card-y, -9deg)) rotateX(var(--card-x, 4deg)); }
+  .launch-card:nth-child(2) { width: 57%; left: 42%; top: 46%; z-index: 3; transform: perspective(1100px) rotateY(var(--card-y, 9deg)) rotateX(var(--card-x, 3deg)); }
+  .launch-card:hover, .launch-card:focus-visible { z-index: 5; }
+  .launch-card img { max-height: none; aspect-ratio: 16/9; }
+  .launch-card:nth-child(2) small { font-size: 11px; }
+}
+@media (prefers-reduced-motion: reduce) { .launch-card { transform: none !important; } }
