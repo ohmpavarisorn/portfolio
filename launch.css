@@ -303,3 +303,22 @@ html[lang="th"] .launch-hero .hero-copy h1 {
 @media (prefers-reduced-motion: reduce) {
   .launch-card { transform: none !important; transition: none !important; }
 }
+
+/* Atmospheric light and depth for the featured work. */
+.launch-hero .hero-copy { position: relative; z-index: 2; }
+.launch-hero .hero-copy h1 { text-wrap: balance; }
+.launch-hero .accent-word { background: linear-gradient(110deg,#e4fbff 5%,#8ae3ff 45%,#bca8ff 85%); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.launch-featured { position: relative; }
+.launch-featured::before { content: ''; position: absolute; inset: 10% -8%; background: radial-gradient(ellipse,#528cff32,transparent 66%); filter: blur(35px); pointer-events: none; }
+.launch-card { overflow: visible; }
+.launch-card::after { content: ''; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; background: linear-gradient(125deg,#ffffff17,transparent 38%,#9beaff0c); }
+.launch-card img { box-shadow: 0 15px 35px #02081790; }
+.launch-hero .button.primary { box-shadow: 0 8px 36px #79d9ff33; transition: transform .25s, box-shadow .25s; }
+.launch-hero .button.primary:hover { transform: translateY(-3px); box-shadow: 0 12px 45px #79d9ff66; }
+@media (min-width:1000px) and (prefers-reduced-motion:no-preference) {
+  .launch-card:first-child { animation: project-float 7s ease-in-out infinite; }
+  .launch-card:nth-child(2) { animation: project-float 8s -3s ease-in-out infinite; }
+  .launch-card:hover, .launch-card:focus-visible { animation-play-state: paused; }
+  @keyframes project-float { 0%,100% { translate: 0 0; } 50% { translate: 0 -9px; } }
+}
+@media (prefers-reduced-motion:reduce) { .launch-hero .button.primary { transition: none; } }
