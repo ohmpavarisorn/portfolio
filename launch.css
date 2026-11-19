@@ -335,3 +335,12 @@ html[lang="th"] .launch-hero .hero-copy h1 {
   .launch-card:nth-child(2) small { font-size: 11px; }
 }
 @media (prefers-reduced-motion: reduce) { .launch-card { transform: none !important; transition: none !important; } }
+
+/* Composite each screen as one surface so child layers cannot cross screens. */
+@media (min-width: 1000px) {
+  .launch-projects { transform-style: flat; isolation: isolate; }
+  .launch-projects .launch-card { transform-style: flat; isolation: isolate; background: #111f33; overflow: hidden; }
+  .launch-projects .launch-card > img,
+  .launch-projects .launch-card > div { transform: none; }
+  .launch-projects .launch-card::after { z-index: 1; }
+}
