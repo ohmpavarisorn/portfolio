@@ -127,7 +127,7 @@ html[lang="th"] .launch-hero .hero-copy h1 {
 .launch-hero .availability div > strong { font-size: 13px; color: #d3f3ff; }
 .launch-hero .availability div > span { font-size: 12px; color: #9fafca; }
 
-.launch-featured { border-top: 1px solid #c0e3ff3d; padding-top: 15px; }
+.launch-featured { border: 0; padding-top: 0; }
 .launch-featured h2 {
   margin: 0 0 10px;
   color: #e4efff;
