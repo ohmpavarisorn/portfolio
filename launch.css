@@ -288,3 +288,18 @@ html[lang="th"] .launch-hero .hero-copy h1 {
   .launch-depth, .launch-card { transition: none; transform: none; }
   .launch-card > img, .launch-card > div { transform: none; }
 }
+
+/* Floating project screens: actual work presented at different depths. */
+@media (min-width: 1000px) {
+  .launch-inner { grid-template-columns: 1.05fr 1fr; align-items: center; gap: 42px; min-height: 780px; }
+  .launch-featured { min-width: 0; perspective: 1400px; padding: 35px 0; }
+  .launch-projects { grid-template-columns: 1fr; gap: 30px; transform-style: preserve-3d; }
+  .launch-card { width: 94%; grid-template-columns: 1fr; padding: 9px; gap: 12px; position: relative; transform-style: preserve-3d; transform: rotateX(var(--card-x, 5deg)) rotateY(var(--card-y, -15deg)) translateZ(var(--card-depth, 0px)); box-shadow: 16px 22px 0 -8px #152c42, 25px 34px 0 -15px #5489a64a, 0 35px 70px #0008; transition: transform .35s ease-out, box-shadow .35s, border-color .3s; }
+  .launch-card:nth-child(2) { width: 82%; margin-left: 16%; --card-y: 12deg; }
+  .launch-card img { max-height: 220px; object-fit: cover; object-position: top; transform: translateZ(18px); }
+  .launch-card > div { padding: 0 12px 10px; transform: translateZ(25px); }
+  .launch-card:hover { border-color: #b2efff; box-shadow: 16px 22px 0 -8px #21405a, 25px 34px 0 -15px #6bb4dd66, 0 40px 80px #0009; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .launch-card { transform: none !important; transition: none !important; }
+}
