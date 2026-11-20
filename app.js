@@ -8,6 +8,46 @@
     $('#contact-form-success').hidden = false;
   }
   const tr=k=>translations[lang][k];
+  const contactForm = document.querySelector('.contact-form');
+  const contactButton = contactForm.querySelector('button[type="submit"]');
+  const contactStatus = document.querySelector('#contact-form-status');
+  let contactSending = false;
+
+  contactForm.addEventListener('submit', async event => {
+    event.preventDefault();
+    if (contactSending) return;
+
+    contactSending = true;
+    contactButton.disabled = true;
+    contactForm.setAttribute('aria-busy', 'true');
+    contactStatus.textContent = tr('messageSending');
+    contactStatus.hidden = false;
+    document.querySelector('#contact-form-success').hidden = true;
+
+    try {
+      const response = await fetch(
+        'https://formsubmit.co/ajax/pavarisornchucarmor2392004685@gmail.com',
+        {
+          method: 'POST',
+          headers: { Accept: 'application/json' },
+          body: new FormData(contactForm),
+          signal: AbortSignal.timeout(25000)
+        }
+      );
+      const result = await response.json();
+      if (!response.ok || (result.success !== true && result.success !== 'true')) {
+        throw new Error('Form submission was not accepted');
+      }
+      window.location.assign('https://ohmpavarisorn.github.io/portfolio/?contact=sent#contact');
+    } catch {
+      contactStatus.textContent = tr('messageFailed');
+    } finally {
+      contactSending = false;
+      contactButton.disabled = false;
+      contactForm.removeAttribute('aria-busy');
+    }
+  });
+
   const escape=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const number=(n,d=0)=>new Intl.NumberFormat(lang==='th'?'th-TH':'en-US',{maximumFractionDigits:d,minimumFractionDigits:d}).format(n);
 
