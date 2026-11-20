@@ -344,3 +344,19 @@ html[lang="th"] .launch-hero .hero-copy h1 {
   .launch-projects .launch-card > div { transform: none; }
   .launch-projects .launch-card::after { z-index: 1; }
 }
+.rate-panel { padding: 22px clamp(16px,4vw,44px); color: #edf5ff; background: linear-gradient(118deg,#14213c,#102b36); }
+.rate-row { display: grid; grid-template-columns: minmax(72px,auto) 1fr 65px; align-items: center; gap: 14px; margin: 7px 0; font-size: 14px; }
+.rate-row i { height: 8px; border-radius: 8px; background: #ffffff14; overflow: hidden; }
+.rate-row b { display: block; height: 100%; background: #a6b5d2; border-radius: inherit; }
+.rate-row + .rate-row b { background: linear-gradient(90deg,#6dbcf3,#84f1d5); }
+.rate-row strong { text-align: right; font-variant-numeric: tabular-nums; }
+#rate-insight { margin: 12px 0 0; color: #c6f5ec; font-size: 14px; }
+.project-role { margin: 18px 0; border-left: 2px solid #8acded; padding: 3px 14px; }
+.project-role p { margin: 4px 0 0; }
+.detail-overview.role-moved { display: block; }
+@media (min-width:1000px) {
+  .launch-projects .launch-card:nth-child(2) { margin-left: 0; left: 29%; width: 69%; }
+  .launch-card:nth-child(2) > div { text-align: right; }
+  .launch-projects .launch-card:hover, .launch-projects .launch-card:focus-visible { z-index: 6; }
+}
+@media (prefers-reduced-motion:no-preference) { .rate-row b { transition: width .38s ease-out; } }

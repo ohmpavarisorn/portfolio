@@ -58,9 +58,10 @@
     $('#dialog-content').innerHTML=`<div class="detail-hero ${p.color}">
       <p class="eyebrow">${escape(c.label)}</p><h2 id="dialog-title">${escape(p.title)}</h2><p>${escape(c.summary)}</p>
       <div class="tech-tags">${p.tech.map(t=>`<span>${escape(t)}</span>`).join('')}<span class="type-tag">${escape(tr(p.type))}</span></div>
+      <div class="project-role"><strong>${tr('role')}</strong><p>${escape(c.role)}</p></div>
       ${p.liveUrl?`<div class="detail-live">${liveLink(p,'button live-button')}<p>${escape(tr(note))}</p></div>`:''}
     </div><div class="detail-body">
-      <div class="detail-overview"><div><h3>${tr('overview')}</h3><p>${escape(c.overview)}</p></div><aside><h3>${tr('role')}</h3><p>${escape(c.role)}</p></aside></div>
+      <div class="detail-overview role-moved"><div><h3>${tr('overview')}</h3><p>${escape(c.overview)}</p></div></div>
       <section class="system-features" aria-labelledby="system-features-title">
         <h3 id="system-features-title">${tr('systemFeatures')}</h3>
         <ul>${p.features[lang].map(([title,description])=>`<li><h4>${escape(title)}</h4><p>${escape(description)}</p></li>`).join('')}</ul>
@@ -125,6 +126,26 @@
     $('#metric-count').textContent=number(count);
     $('#metric-share').textContent=tr('dataShare')(number(count/credit.rows*100,1));
     $('#metric-rate').textContent=number(count?targets/count*100:0,2)+'%';
+    const overall = 100 * credit.target_count / credit.rows;
+    const rate = count ? 100 * targets / count : 0;
+    const scale = Math.max(10, Math.ceil(Math.max(overall, rate) / 5) * 5);
+    $('#rate-panel').hidden = false;
+    $('#overall-rate').textContent = number(overall, 2) + '%';
+    $('#group-rate').textContent = count ? number(rate, 2) + '%' : '—';
+    $('#overall-bar').style.width = (overall / scale * 100) + '%';
+    $('#group-bar').style.width = (rate / scale * 100) + '%';
+    const difference = rate - overall;
+    const points = number(Math.abs(difference), 2);
+    const scope = [age === 'all' ? tr('allAges') : age, gender === 'all' ? '' : gender].filter(Boolean).join(' · ');
+    let insight = lang === 'th' ? 'เลือกช่วงอายุเพื่อดูความต่างจากภาพรวม' : 'Choose an age range to compare with the overall rate.';
+    if (!isUnfiltered && count) {
+      insight = lang === 'th'
+        ? scope + ' · ' + (difference >= 0 ? 'สูงกว่า' : 'ต่ำกว่า') + 'ภาพรวม ' + points + ' จุดเปอร์เซ็นต์'
+        : scope + ' · ' + points + ' percentage points ' + (difference >= 0 ? 'above' : 'below') + ' the overall rate.';
+    } else if (!count) {
+      insight = lang === 'th' ? 'ไม่มีรายการในกลุ่มที่เลือก' : 'No records in the selected group.';
+    }
+    $('#rate-insight').textContent = insight;
     const values=ages.map(a=>groups.filter(g=>g.age===a).reduce((sum,g)=>sum+g.count,0));
     const max=Math.max(...values,1);
     $('#age-chart').innerHTML=ages.map((a,i)=>`<button class="chart-bar ${age===a?'selected':''} ${age!=='all'&&age!==a?'muted':''}" data-age="${a}" aria-label="${escape(tr('chartSelect')(a))}: ${number(values[i])}" aria-pressed="${age===a}"><span class="bar-count">${number(values[i])}</span><span class="bar-track"><span style="height:${Math.max(2,values[i]/max*100)}%"></span></span><span class="bar-label">${a}</span></button>`).join('');

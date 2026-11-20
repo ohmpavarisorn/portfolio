@@ -18,10 +18,10 @@
   <link rel="stylesheet" href="ask-ohm.css?v=glass">
   <link rel="stylesheet" href="cursor.css?v=spotlight">
   <link rel="preload" as="image" href="launch-planet.webp">
-  <link rel="stylesheet" href="launch.css?v=depth">
+  <link rel="stylesheet" href="launch.css?v=case-study">
   <script src="launch.js?v=depth" defer></script>
-  <script src="content.js?v=orbit-showcase" defer></script>
-  <script src="app.js?v=credentials" defer></script>
+  <script src="content.js?v=case-study" defer></script>
+  <script src="app.js?v=case-study" defer></script>
   <script src="navigation.js?v=soft-glass" defer></script>
   <script src="space.js?v=showcase" defer></script>
   <script src="ask-ohm.js?v=project-skills" defer></script>
@@ -77,11 +77,11 @@
           <div class="launch-projects">
             <a class="launch-card" href="#project/credit-risk">
               <img src="assets/credit-ui.webp" width="1280" height="720" alt="" decoding="async">
-              <div><strong>Credit Risk Analytics</strong><small data-i18n="featuredCredit">สำรวจข้อมูลสินเชื่อกว่า 300,000 รายการ</small></div>
+              <div><strong>Credit Risk Analytics</strong><small data-i18n="featuredCredit">ผู้สมัครอายุ 18–24 ปีมีปัญหาชำระเงิน 12.29% เทียบกับภาพรวม 8.07%</small></div>
             </a>
             <a class="launch-card" href="#project/mu-forecast">
               <img src="assets/prediction-stock-ui.webp" width="1280" height="720" alt="" decoding="async">
-              <div><strong>Prediction_Stock_Price</strong><small data-i18n="featuredStock">Walk-forward evaluation · ผล v5 ยังไม่ชนะ baseline</small></div>
+              <div><strong data-i18n="muTitle">พยากรณ์หุ้น MU</strong><small data-i18n="featuredStock">เมื่อทดสอบย้อนหลัง โมเดล v5 ยังพยากรณ์ได้ไม่ดีกว่าวิธีพื้นฐาน</small></div>
             </a>
           </div>
         </div>
@@ -117,11 +117,16 @@
 
     <section class="playground-section" id="playground">
       <div class="wrap">
-        <div class="section-heading"><div><p class="eyebrow section-index">02 / A CLOSER LOOK</p><h2 data-i18n-html="playTitle">ข้อมูลเล่าเรื่องได้<br>เมื่อเราลอง<span class="serif-word">ตั้งคำถาม</span></h2></div><p class="section-intro" data-i18n="playIntro">ลองปรับตัวกรองเพื่อสำรวจข้อมูลจากโปรเจกต์ Credit Risk และดูว่าองค์ประกอบของกลุ่มข้อมูลเปลี่ยนไปอย่างไร</p></div>
+        <div class="section-heading"><div><p class="eyebrow section-index">02 / A CLOSER LOOK</p><h2 data-i18n-html="playTitle">ข้อมูลเล่าเรื่องได้<br>เมื่อเราลอง<span class="serif-word">ตั้งคำถาม</span></h2></div><p class="section-intro" data-i18n="playIntro">เมื่อเลือกช่วงอายุต่างกัน สัดส่วนผู้สมัครที่มีปัญหาชำระเงินต่างจากภาพรวมเท่าไร? เลือกช่วงอายุหรือคลิกแท่งกราฟเพื่อเปรียบเทียบ</p></div>
         <div class="explorer">
           <div class="explorer-top"><div><span class="live-dot"></span><strong>Credit Risk / Data Explorer</strong></div><span data-i18n="aggregateOnly">ข้อมูลสรุปจากชุดข้อมูลการเรียน</span></div>
           <div class="explorer-controls"><label><span data-i18n="ageLabel">ช่วงอายุ</span><select id="age-filter"><option value="all">ทุกช่วงอายุ</option><option>18-24</option><option>25-29</option><option>30-34</option><option>35-39</option><option>40-44</option><option>45-49</option><option>50-59</option><option>60-69</option></select></label><label><span data-i18n="genderLabel">เพศในชุดข้อมูล</span><select id="gender-filter"><option value="all">ทั้งหมด</option><option value="F">F</option><option value="M">M</option></select></label><button class="reset-button" id="reset-data" data-i18n="reset">↺ รีเซ็ต</button><span class="data-source">SOURCE: application_train.csv</span></div>
-          <div class="explorer-body"><div class="data-metrics"><div><p data-i18n="recordsLabel">จำนวนข้อมูลที่เลือก</p><strong id="metric-count">—</strong><span id="metric-share">—</span></div><div><p data-i18n="targetLabel">สัดส่วน TARGET = 1</p><strong id="metric-rate">—</strong><span data-i18n="targetExplanation">เป้าหมายตาม label ของชุดข้อมูล</span></div><p class="metric-note" data-i18n="metricNote">ตัวอย่างการสำรวจข้อมูลเชิงพรรณนา ไม่ใช่โมเดลตัดสินสินเชื่อ</p></div><div class="age-chart"><div class="chart-heading"><h3 data-i18n="chartTitle">การกระจายตามช่วงอายุ</h3><span data-i18n="chartUnit">จำนวนรายการ</span></div><div id="age-chart" class="bars" role="group" aria-label="Age distribution chart"></div><div class="chart-legend"><span><i></i><span data-i18n="legendCount">จำนวนข้อมูลในกลุ่มที่เลือก</span></span><span data-i18n="chartHint">คลิกแท่งกราฟเพื่อกรองอายุ</span></div></div></div>
+          <div class="rate-panel" hidden id="rate-panel">
+            <div class="rate-row"><span data-i18n="overall">ภาพรวม</span><i><b id="overall-bar"></b></i><strong id="overall-rate"></strong></div>
+            <div class="rate-row"><span data-i18n="group">กลุ่มที่เลือก</span><i><b id="group-bar"></b></i><strong id="group-rate"></strong></div>
+            <p id="rate-insight" aria-live="polite"></p>
+          </div>
+          <div class="explorer-body"><div class="data-metrics"><div><p data-i18n="recordsLabel">จำนวนข้อมูลที่เลือก</p><strong id="metric-count">—</strong><span id="metric-share">—</span></div><div><p data-i18n="targetLabel">สัดส่วน TARGET = 1</p><strong id="metric-rate">—</strong><span data-i18n="targetExplanation">TARGET = 1 หมายถึงผู้สมัครที่มีปัญหาชำระเงินตามนิยามของชุดข้อมูล</span></div><p class="metric-note" data-i18n="metricNote">ความแตกต่างระหว่างกลุ่มยังสรุปไม่ได้ว่าอายุเป็นสาเหตุของปัญหาชำระเงิน</p></div><div class="age-chart"><div class="chart-heading"><h3 data-i18n="chartTitle">การกระจายตามช่วงอายุ</h3><span data-i18n="chartUnit">จำนวนรายการ</span></div><div id="age-chart" class="bars" role="group" aria-label="Age distribution chart"></div><div class="chart-legend"><span><i></i><span data-i18n="legendCount">จำนวนข้อมูลในกลุ่มที่เลือก</span></span><span data-i18n="chartHint">คลิกแท่งกราฟเพื่อกรองอายุ</span></div></div></div>
           <p class="explorer-foot" data-i18n="dataFoot">แสดงเฉพาะสถิติรวม ไม่มีข้อมูลรายบุคคล · รายการที่อยู่นอกช่วงอายุ 18–69 ปีหรือรหัสเพศอื่นไม่รวมอยู่ในกราฟ</p>
         </div>
       </div>
