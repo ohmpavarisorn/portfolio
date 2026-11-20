@@ -4,6 +4,9 @@
   const $=s=>document.querySelector(s);
   let lang='th',filter='all',credit=null,forecast=null,activeProject=null,lastFocused=null;
   try{lang=localStorage.getItem('ohm-portfolio-language')==='en'?'en':'th';}catch{}
+  if (new URLSearchParams(location.search).get('contact') === 'sent') {
+    $('#contact-form-success').hidden = false;
+  }
   const tr=k=>translations[lang][k];
   const escape=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const number=(n,d=0)=>new Intl.NumberFormat(lang==='th'?'th-TH':'en-US',{maximumFractionDigits:d,minimumFractionDigits:d}).format(n);
