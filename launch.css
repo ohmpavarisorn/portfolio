@@ -360,3 +360,25 @@ html[lang="th"] .launch-hero .hero-copy h1 {
   .launch-projects .launch-card:hover, .launch-projects .launch-card:focus-visible { z-index: 6; }
 }
 @media (prefers-reduced-motion:no-preference) { .rate-row b { transition: width .38s ease-out; } }
+
+/* Reading position sits directly beneath the navigation. */
+.reading-progress {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 3px;
+  pointer-events: none;
+  background: #91cfff0b;
+}
+.reading-progress > span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transform: scaleX(0);
+  transform-origin: left center;
+  background: linear-gradient(90deg, #79e4ff, #99b9ff 55%, #c4a2ff);
+  box-shadow: 0 0 9px #99c8ff88;
+  border-radius: 0 3px 3px 0;
+}
+@media print { .reading-progress { display: none; } }
