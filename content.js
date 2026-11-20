@@ -3,7 +3,7 @@ window.PORTFOLIO = {
     th: {
       downloadResume:'ดาวน์โหลดเรซูเม่ (PDF)',
       credentialsTitle:'ใบประกาศ',credentialsIntro:'ใบประกาศจาก Microsoft · ใช้ล้อเมาส์หรือปัดเพื่อดูเพิ่มเติม',
-      muTitle:'พยากรณ์หุ้น MU',overall:'ภาพรวม',group:'กลุ่มที่เลือก',featuredTitle:'ผลงานเด่นสาย Data',featuredCredit:'ผู้สมัครอายุ 18–24 ปีมีปัญหาชำระเงิน 12.29% เทียบกับภาพรวม 8.07%',featuredStock:'เมื่อทดสอบย้อนหลัง โมเดล v5 ยังพยากรณ์ได้ไม่ดีกว่าวิธีพื้นฐาน',
+      featuredFeelancer:'ข้อตกลงจ้างงานและ Escrow บน Ethereum Sepolia',muTitle:'พยากรณ์หุ้น MU',overall:'ภาพรวม',group:'กลุ่มที่เลือก',featuredTitle:'ผลงานเด่นสาย Data',featuredCredit:'ผู้สมัครอายุ 18–24 ปีมีปัญหาชำระเงิน 12.29% เทียบกับภาพรวม 8.07%',featuredStock:'เมื่อทดสอบย้อนหลัง โมเดล v5 ยังพยากรณ์ได้ไม่ดีกว่าวิธีพื้นฐาน',
       eventpackLiveNote:'สมัครบัญชีลูกค้าเพื่อทดลองจองด้วยข้อมูลสมมติ หน้าจัดการการจองและเมนูใช้บัญชีผู้ดูแล',
       systemFeatures:'ฟังก์ชันและฟีเจอร์ของระบบ',storePreview:'เปิดเดโม VYNE',storeDemoNote:'ทดลองค้นหา กรองสินค้า ใส่ตะกร้า และเปลี่ยนรูปสินค้าในเบราว์เซอร์ด้วยข้อมูลตัวอย่าง เดโมไม่มีการสั่งซื้อจริง',classifierNote:'ลองจำแนกข้อความสั้นภาษาอังกฤษและเปรียบเทียบผลของโมเดลที่ฝึกใหม่จากชุดข้อมูลต้นฉบับในเบราว์เซอร์',
       skip:'ข้ามไปเนื้อหา',navWork:'ผลงาน',navAbout:'เกี่ยวกับผม',navExplore:'ลองสำรวจข้อมูล',navContact:'ติดต่อผม',
@@ -24,7 +24,7 @@ window.PORTFOLIO = {
     en: {
       downloadResume:'Download résumé (PDF)',
       credentialsTitle:'Certificates',credentialsIntro:'Microsoft course certificates · Scroll or swipe to browse',
-      muTitle:'MU Stock Forecast',overall:'Overall',group:'Selected group',featuredTitle:'Featured data projects',featuredCredit:'Payment difficulties affected 12.29% of applicants aged 18–24 versus 8.07% overall.',featuredStock:'In backtesting, the v5 model did not beat the baseline.',
+      featuredFeelancer:'Freelance agreements and escrow on Ethereum Sepolia',muTitle:'MU Stock Forecast',overall:'Overall',group:'Selected group',featuredTitle:'Featured data projects',featuredCredit:'Payment difficulties affected 12.29% of applicants aged 18–24 versus 8.07% overall.',featuredStock:'In backtesting, the v5 model did not beat the baseline.',
       eventpackLiveNote:'Register a customer account to try booking with sample details. Booking and menu management require an administrator account.',
       systemFeatures:'System features',storePreview:'Open VYNE demo',storeDemoNote:'Search, filter, add items to the cart, and preview a replacement image using sample data in your browser. This demo does not place orders.',classifierNote:'Classify short English messages and compare models retrained on the original datasets. Inference runs in your browser.',
       skip:'Skip to content',navWork:'Work',navAbout:'About',navExplore:'Data explorer',navContact:'Get in touch',
