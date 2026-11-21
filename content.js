@@ -20,7 +20,7 @@ window.PORTFOLIO = {
       playTitle:'ข้อมูลเล่าเรื่องได้<br>เมื่อเราลอง<span class="serif-word">ตั้งคำถาม</span>',playIntro:'เมื่อเลือกช่วงอายุต่างกัน สัดส่วนผู้สมัครที่มีปัญหาชำระเงินต่างจากภาพรวมเท่าไร? เลือกช่วงอายุหรือคลิกแท่งกราฟเพื่อเปรียบเทียบ',aggregateOnly:'ข้อมูลสรุปจากชุดข้อมูลการเรียน',ageLabel:'ช่วงอายุ',genderLabel:'เพศในชุดข้อมูล',reset:'↺ รีเซ็ต',recordsLabel:'จำนวนข้อมูลที่เลือก',targetLabel:'สัดส่วน TARGET = 1',targetExplanation:'TARGET = 1 หมายถึงผู้สมัครที่มีปัญหาชำระเงินตามนิยามของชุดข้อมูล',metricNote:'ความแตกต่างระหว่างกลุ่มยังสรุปไม่ได้ว่าอายุเป็นสาเหตุของปัญหาชำระเงิน',chartTitle:'การกระจายตามช่วงอายุ',chartUnit:'จำนวนรายการ',legendCount:'จำนวนข้อมูลในกลุ่มที่เลือก',chartHint:'คลิกแท่งกราฟเพื่อกรองอายุ',dataFoot:'แสดงเฉพาะสถิติรวม ไม่มีข้อมูลรายบุคคล · รายการที่อยู่นอกช่วงอายุ 18–69 ปีหรือรหัสเพศอื่นไม่รวมอยู่ในกราฟ',
       aboutTitle:'สวัสดีครับ ผมโอม<br><span class="serif-word">ชอบเข้าใจ แล้วลงมือสร้าง</span>',aboutBody:'ผมเป็นนักศึกษาปี 4 มหาวิทยาลัยศรีปทุม สาขาวิทยาการคอมพิวเตอร์และนวัตกรรมการพัฒนาซอฟต์แวร์ ในสาย Full Stack Developer และกำลังมองหาโอกาสสหกิจที่ได้เรียนรู้และทำงานกับข้อมูลมากขึ้น',aboutBody2:'ในงานกลุ่ม ผมร่วมทำตั้งแต่รวบรวมข้อมูลไปจนถึงแอป และให้ความสำคัญกับการคุยทำความเข้าใจระบบทั้งหมดเพื่ออธิบายแนวคิดและการทำงานได้ ส่วน EventPack เป็นโปรเจกต์ที่ลงมือทำด้วยตัวเอง',educationTitle:'มหาวิทยาลัยศรีปทุม',educationBody:'วิทยาการคอมพิวเตอร์และนวัตกรรมการพัฒนาซอฟต์แวร์',educationTrack:'ชั้นปีที่ 4 · Full Stack Developer',skillsTitle:'สิ่งที่ผมทำได้',
       nextEyebrow:'EXPLORING NEXT / โปรเจกต์ถัดไป',nextTitle:'การยืนยันสำเนาเอกสารที่ดินด้วย Blockchain',nextBody:'อีกทิศทางที่สนใจและเตรียมต่อยอดเป็นโปรเจกต์ใหม่',comingSoon:'กำลังวางแผน ↗',contactTitle:'มีโอกาสดี ๆ<br>มา<span class="serif-word">คุยกันครับ</span><span class="contact-star">✳</span>',contactBody:'สนใจสหกิจด้าน Data และงานเทคโนโลยี\nในช่วงเดือนมกราคม – เมษายน',emailMe:'ส่งอีเมลถึงผม',backTop:'กลับขึ้นด้านบน ↑',
-      projectCount:n=>`${n} ผลงาน`,viewProject:'ดูโปรเจกต์',team:'งานกลุ่ม',web3:'โปรเจกต์ Web3',solo:'งานเดี่ยว',course:'โปรเจกต์การเรียน',overview:'โจทย์และแนวคิด',role:'บทบาทของผม',approach:'วิธีทำและส่วนสำคัญ',learning:'สิ่งที่ได้เรียนรู้',gallery:'ภาพและองค์ประกอบของโปรเจกต์',source:'ดู Source บน GitHub ↗',nextProject:'โปรเจกต์ถัดไป →',close:'ปิดรายละเอียด',allAges:'ทุกช่วงอายุ',allGenders:'ทั้งหมด',dataShare:p=>`${p}% ของข้อมูลในชุดต้นฉบับ`,unavailable:'ยังโหลดข้อมูลไม่ได้ ลองรีเฟรชอีกครั้ง',chartSelect:a=>`กรองอายุ ${a} ปี`,imageZoom:'คลิกเพื่อดูภาพใหญ่',featureLabel:'สิ่งที่ได้ลงมือทำ',forecastTitle:'เปรียบเทียบ RMSE กับ Baseline',forecastNote:'ผลทดลอง v5: RMSE ต่ำกว่าดีกว่า โมเดลที่แสดงคือค่าดีที่สุดในแต่ละช่วงพยากรณ์จากไฟล์ผลทดลอง และยังไม่ชนะ baseline',model:'โมเดล',baseline:'Baseline',months:'เดือน',
+      projectCount:n=>`${n} ผลงาน`,viewProject:'ดูโปรเจกต์',team:'งานกลุ่ม',web3:'โปรเจกต์ Web3',experience:'ประสบการณ์เว็บ 3D',atlasLiveNote:'เว็บไซต์นำเสนออิสระ โมเดลและแปลนห้องเป็นแบบจำลองแนวคิดสำหรับการสำรวจ',solo:'งานเดี่ยว',course:'โปรเจกต์การเรียน',overview:'โจทย์และแนวคิด',role:'บทบาทของผม',approach:'วิธีทำและส่วนสำคัญ',learning:'สิ่งที่ได้เรียนรู้',gallery:'ภาพและองค์ประกอบของโปรเจกต์',source:'ดู Source บน GitHub ↗',nextProject:'โปรเจกต์ถัดไป →',close:'ปิดรายละเอียด',allAges:'ทุกช่วงอายุ',allGenders:'ทั้งหมด',dataShare:p=>`${p}% ของข้อมูลในชุดต้นฉบับ`,unavailable:'ยังโหลดข้อมูลไม่ได้ ลองรีเฟรชอีกครั้ง',chartSelect:a=>`กรองอายุ ${a} ปี`,imageZoom:'คลิกเพื่อดูภาพใหญ่',featureLabel:'สิ่งที่ได้ลงมือทำ',forecastTitle:'เปรียบเทียบ RMSE กับ Baseline',forecastNote:'ผลทดลอง v5: RMSE ต่ำกว่าดีกว่า โมเดลที่แสดงคือค่าดีที่สุดในแต่ละช่วงพยากรณ์จากไฟล์ผลทดลอง และยังไม่ชนะ baseline',model:'โมเดล',baseline:'Baseline',months:'เดือน',
     },
     en: {
       messageSending:'Sending your message…',messageFailed:'We could not confirm submission. Your message is still here. Check your connection or use the email link below.',messageTitle:'Send me a message',senderName:'Your name',senderCompany:'Company / organization (optional)',senderEmail:'Your email address',senderMessage:'Message',sendMessage:'Send message',formPrivacy:'Your message is sent through FormSubmit to my email so I can reply to you.',messageSent:'Your email has been sent successfully.',
@@ -41,10 +41,105 @@ window.PORTFOLIO = {
       playTitle:'A good question<br>makes data <span class="serif-word">interesting.</span>',playIntro:'How does the share of applicants with payment difficulties vary by age? Choose an age range or select a bar to compare it with the full dataset.',aggregateOnly:'Aggregated course-project data',ageLabel:'Age group',genderLabel:'Gender code in dataset',reset:'↺ Reset filters',recordsLabel:'Selected records',targetLabel:'Share of TARGET = 1',targetExplanation:'TARGET = 1 identifies applicants with payment difficulties as defined by the dataset.',metricNote:'Differences between groups do not establish that age causes payment difficulties.',chartTitle:'Distribution by age',chartUnit:'Record count',legendCount:'Records in the selected group',chartHint:'Select a bar to filter by age',dataFoot:'Aggregate statistics only; no individual records. The chart excludes ages outside 18–69 and other gender codes.',
       aboutTitle:'Hi, I’m Ohm.<br><span class="serif-word">Understand it. Then build it.</span>',aboutBody:'I’m a fourth-year student at Sripatum University studying Computer Science and Software Development Innovation, in the Full Stack Developer track. I’m looking for a co-op opportunity to learn more and work with data.',aboutBody2:'In group projects, I contribute across the journey from collecting data to the application. Team meetings help me understand and explain the complete system. EventPack is a project I built individually.',educationTitle:'Sripatum University',educationBody:'Computer Science and Software Development Innovation',educationTrack:'Fourth-year student · Full Stack Developer',skillsTitle:'What I can do',
       nextEyebrow:'EXPLORING NEXT / UPCOMING',nextTitle:'Blockchain verification for land-document copies',nextBody:'A new project direction I’m preparing to explore.',comingSoon:'In planning ↗',contactTitle:'An opportunity?<br>Let’s <span class="serif-word">talk.</span><span class="contact-star">✳</span>',contactBody:'Interested in Data & Technology co-op opportunities\nfrom January to April.',emailMe:'Send me an email',backTop:'Back to top ↑',
-      projectCount:n=>`${n} projects`,viewProject:'View project',team:'Team project',web3:'Web3 project',solo:'Individual project',course:'Course project',overview:'The idea',role:'My contribution',approach:'Approach & key components',learning:'What I learned',gallery:'Project visuals',source:'View source on GitHub ↗',nextProject:'Next project →',close:'Close project',allAges:'All ages',allGenders:'All',dataShare:p=>`${p}% of the original dataset`,unavailable:'Data could not load. Please refresh and try again.',chartSelect:a=>`Filter age ${a}`,imageZoom:'Select to enlarge',featureLabel:'Project highlights',forecastTitle:'RMSE compared with the baseline',forecastNote:'v5 experiment: lower RMSE is better. The chart uses the best recorded model per horizon in the result file. These models did not outperform the baseline.',model:'Model',baseline:'Baseline',months:'months',
+      projectCount:n=>`${n} projects`,viewProject:'View project',team:'Team project',web3:'Web3 project',experience:'3D web experience',atlasLiveNote:'Independent presentation. The room model and floor plan are approximate design concepts for exploration.',solo:'Individual project',course:'Course project',overview:'The idea',role:'My contribution',approach:'Approach & key components',learning:'What I learned',gallery:'Project visuals',source:'View source on GitHub ↗',nextProject:'Next project →',close:'Close project',allAges:'All ages',allGenders:'All',dataShare:p=>`${p}% of the original dataset`,unavailable:'Data could not load. Please refresh and try again.',chartSelect:a=>`Filter age ${a}`,imageZoom:'Select to enlarge',featureLabel:'Project highlights',forecastTitle:'RMSE compared with the baseline',forecastNote:'v5 experiment: lower RMSE is better. The chart uses the best recorded model per horizon in the result file. These models did not outperform the baseline.',model:'Model',baseline:'Baseline',months:'months',
     }
   },
   projects:[
+    {
+  "id": "siam-atlas",
+  "title": "Siam Atlas · MahaNakhon",
+  "categories": [
+    "web"
+  ],
+  "type": "experience",
+  "color": "sage",
+  "image": "assets/siam-atlas-live.jpg",
+  "tech": [
+    "Interactive 3D",
+    "Responsive UI",
+    "Virtual Tour"
+  ],
+  "liveUrl": "https://siam-atlas-mahanakhon-nov.minorebony5.chatgpt.site/",
+  "liveKind": "atlas",
+  "features": {
+    "th": [
+      [
+        "สำรวจอาคาร 3D",
+        "หมุนและซูมโมเดลอาคาร เลือกมุมเต็มอาคาร ระเบียงพิกเซล ผิวกระจก หรือดาดฟ้า"
+      ],
+      [
+        "เลือกชั้นและแสง",
+        "เข้าถึงชั้นแนะนำ เปลี่ยนแสง และเปิดโหมดนำเสนอเพื่อขยายโมเดล"
+      ],
+      [
+        "ห้องและแปลน",
+        "ดูโมเดลตัดเปิดของห้องตัวอย่างชั้น 49 พร้อมเลือกพื้นที่ภายในห้อง และสลับเป็นแปลน"
+      ],
+      [
+        "ภาพจริงและทำเล",
+        "เข้าถึงภาพ 360° วิดีโอเรสซิเดนซ์ และลิงก์เส้นทางเดินจาก BTS ช่องนนทรี"
+      ]
+    ],
+    "en": [
+      [
+        "Explore the 3D tower",
+        "Rotate and zoom the building, with presets for the full tower, pixel terraces, glass façade and rooftop."
+      ],
+      [
+        "Floors and lighting",
+        "Choose featured floors, change lighting and expand the model in presentation mode."
+      ],
+      [
+        "Room model and floor plan",
+        "Explore a cutaway model of the floor-49 sample residence, select interior areas and switch to the floor plan."
+      ],
+      [
+        "Real views and location",
+        "Access 360° imagery, residence videos and walking directions from Chong Nonsi BTS."
+      ]
+    ]
+  },
+  "th": {
+    "label": "INTERACTIVE 3D / ARCHITECTURAL EXPERIENCE",
+    "summary": "สำรวจมหานครผ่านโมเดลอาคารสามมิติ ห้องตัวอย่าง และแปลนแบบโต้ตอบ",
+    "overview": "เว็บไซต์นำเสนออิสระเกี่ยวกับอาคารมหานครและพื้นที่โดยรอบ เชื่อมประสบการณ์สำรวจอาคาร ห้องตัวอย่าง ภาพจริง และข้อมูลทำเลไว้ในหน้าเดียว โมเดลและแปลนห้องเป็นแบบจำลองแนวคิดเพื่อการสำรวจ",
+    "role": "ผลงานเว็บไซต์ Siam Atlas ที่นำเสนอการสำรวจอาคารและเรสซิเดนซ์แบบโต้ตอบ สามารถเปิดทดลองผ่านลิงก์เว็บไซต์ได้",
+    "approach": [
+      "นำทางจากภาพรวมอาคารไปยังชั้นและมุมกล้องที่สนใจ",
+      "เชื่อมโมเดลห้อง แปลน และภาพอ้างอิงเข้ากับการสำรวจพื้นที่",
+      "จัดข้อมูลสถาปัตยกรรมและทำเล พร้อมลิงก์อ้างอิงจากแหล่งต้นทาง"
+    ],
+    "learning": "การเชื่อมโมเดลสามมิติกับมุมกล้องและแปลน ช่วยให้ผู้ชมเข้าใจความสัมพันธ์ของพื้นที่ได้ชัดขึ้น",
+    "caption": "ภาพจากเว็บไซต์ Siam Atlas ที่เปิดใช้งานจริง"
+  },
+  "en": {
+    "label": "INTERACTIVE 3D / ARCHITECTURAL EXPERIENCE",
+    "summary": "Explore MahaNakhon through an interactive 3D tower, sample residence and floor plan.",
+    "overview": "An independent presentation of MahaNakhon and its surroundings, combining building exploration, a sample residence, real imagery and location information. The room model and floor plan illustrate an approximate design concept.",
+    "role": "A Siam Atlas website presenting interactive exploration of the tower and residences. Open the live website to try the experience.",
+    "approach": [
+      "Navigate from the full tower to selected floors and camera views",
+      "Connect room models, floor plans and reference imagery in the spatial exploration",
+      "Present architectural and location information with links to original sources"
+    ],
+    "learning": "Connecting a 3D model with camera presets and floor plans helps visitors understand spatial relationships.",
+    "caption": "Screenshots from the live Siam Atlas website"
+  },
+  "gallery": [
+    "assets/siam-atlas-live.jpg",
+    "assets/siam-atlas-room.jpg"
+  ],
+  "galleryDetails": {
+    "th": [
+      "โมเดลอาคารมหานครและมุมกล้องบนหน้าแรก",
+      "โมเดลตัดเปิดของห้องตัวอย่างชั้น 49"
+    ],
+    "en": [
+      "MahaNakhon tower model and homepage camera controls",
+      "Cutaway model of the floor-49 sample residence"
+    ]
+  }
+},
     {id:'feelancer',title:'DigitalWork · Feelancer',categories:['web','blockchain'],type:'web3',color:'ink',image:'assets/feelancer-live.jpg',tech:['React','Ethers.js','Solidity','Sepolia'],liveUrl:'https://ohmpavarisorn.github.io/Feelancer/',liveKind:'testnet',repo:'https://github.com/ohmpavarisorn/Feelancer',
       features:{th:[['สร้างข้อตกลง','ระบุรายละเอียดงาน ผู้รับจ้าง ค่าจ้าง และกำหนดส่งผ่าน smart contract'],['Escrow และส่งมอบงาน','ทดลองฝากค่าจ้าง ส่งหลักฐาน และอนุมัติการจ่ายตามสถานะงาน'],['ข้อพิพาทและการตรวจสอบ','ดูสถานะธุรกรรมและขั้นตอนจัดการข้อพิพาท พร้อมคู่มือการใช้งานภายในเว็บ']],en:[['Create agreements','Specify project details, freelancer, payment and deadline through a smart contract.'],['Escrow and delivery','Explore funding, work submission and payment approval across job states.'],['Disputes and transparency','Review transaction states and the dispute process, with an in-app guide.']]},
       th:{label:'WEB3 / FREELANCE ESCROW / TESTNET',summary:'แพลตฟอร์มข้อตกลงจ้างงานและ Escrow บน Ethereum Sepolia พร้อมคู่มือในระบบ',overview:'เว็บสำหรับศึกษาการจ้างงานฟรีแลนซ์ผ่าน smart contract ตั้งแต่สร้างข้อตกลง ฝากค่าจ้าง ส่งงาน ไปจนถึงการอนุมัติและจัดการข้อพิพาท โดยใช้เครือข่ายทดสอบ Sepolia',role:'โปรเจกต์พัฒนาเว็บและ blockchain ดูรายละเอียดโค้ดและประวัติการพัฒนาได้ใน GitHub repository',approach:['พัฒนาหน้าเว็บด้วย React และเชื่อม wallet ผ่าน Ethers.js','ออกแบบการแสดงสถานะงานและขั้นตอน escrow','จัดทำคู่มือภายในเว็บเพื่อช่วยให้ผู้ใช้เริ่มต้น'],learning:'การออกแบบแอป blockchain ต้องสื่อสารสถานะธุรกรรม เครือข่ายทดสอบ และข้อจำกัดของ wallet ให้ชัดเจน',caption:'ภาพหน้าเว็บไซต์ DigitalWork จริงบน GitHub Pages'},

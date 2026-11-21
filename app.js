@@ -97,7 +97,7 @@
   const dialog=$('#project-dialog');
   function renderProject(p){
     const c=p[lang];const next=projects[(projects.indexOf(p)+1)%projects.length];
-    const note={saved:'savedDemoNote',testnet:'testnetNote',explorer:'explorerNote',store:'storeDemoNote',classifier:'classifierNote',eventpack:'eventpackLiveNote'}[p.liveKind];
+    const note={saved:'savedDemoNote',testnet:'testnetNote',explorer:'explorerNote',store:'storeDemoNote',classifier:'classifierNote',eventpack:'eventpackLiveNote',atlas:'atlasLiveNote'}[p.liveKind];
     $('#dialog-content').innerHTML=`<div class="detail-hero ${p.color}">
       <p class="eyebrow">${escape(c.label)}</p><h2 id="dialog-title">${escape(p.title)}</h2><p>${escape(c.summary)}</p>
       <div class="tech-tags">${p.tech.map(t=>`<span>${escape(t)}</span>`).join('')}<span class="type-tag">${escape(tr(p.type))}</span></div>
